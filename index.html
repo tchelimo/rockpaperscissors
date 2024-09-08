@@ -17,10 +17,34 @@
             : randomNumber === 1
             ? "paper"
             : "scissors";
-        //console.log(choice);
+        return choice;
       }
 
-      getComputerChoice();
+      function getHumanChoice() {
+        let humanChoice;
+        let numberEntered = parseInt(
+          prompt(`Enter a number between 1 and 3 as follows:
+        1 - for "rock"
+        2 - for "paper"
+        3 - for "scissors"
+        `)
+        );
+        while (numberEntered < 1 || numberEntered > 3) {
+          numberEntered = parseInt(
+            prompt(`Enter a number between 1 and 3 as follows:
+        1 - for "rock"
+        2 - for "paper"
+        3 - for "scissors"
+        `)
+          );
+        }
+        humanChoice =
+          numberEntered === 1
+            ? "rock"
+            : numberEntered === 2
+            ? "paper"
+            : "scissors";
+      }
     </script>
   </body>
 </html>
