@@ -57,14 +57,14 @@
           }
         }
 
-        while (counter < 5) {
+        while (counter < 4) {
           playRound(humanSelection, computerSelection);
           counter++;
           humanSelection = getHumanChoice();
           computerSelection = getComputerChoice();
         }
         if (humanScore > computerScore) {
-          console.log(`You win! Compuer looses`);
+          console.log(`You win! Computer looses`);
         } else if (humanScore < computerScore) {
           console.log(`You lose! Computer wins`);
         }
